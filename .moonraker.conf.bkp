@@ -85,3 +85,25 @@ is_system_service = False
 managed_services = klipper
 info_tags = desc=Cartographer Plugin
 
+[update_manager helixscreen]
+type = zip
+channel = stable
+repo = prestonbrown/helixscreen
+path = /home/pi/helixscreen
+managed_services = helixscreen
+persistent_files = 
+	config/helixconfig.json
+	config/.disabled_services
+
+[update_manager happy-hare]
+type = git_repo
+path = ~/Happy-Hare
+origin = https://github.com/moggieuk/Happy-Hare.git
+primary_branch = main
+managed_services = klipper
+
+[mmu_server]
+enable_file_preprocessor = True
+enable_toolchange_next_pos = True
+update_spoolman_location = True
+

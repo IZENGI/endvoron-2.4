@@ -1,6 +1,3 @@
-[include mmu/base/*.cfg]
-[include mmu/addons/mmu_eject_buttons.cfg]
-
 
 ####################################################################
 #                        KLIPPER CONFIGS                           #
@@ -273,14 +270,9 @@ tachometer_pin: EBBCan:gpio12
 ####################################################################
 #                      CHAMBER LIGHTS                              #
 ####################################################################
-[neopixel lights]
-pin:PE6
-color_order:GRB
-chain_count:10
-initial_RED: 0.1 #0.5
-initial_GREEN: 0.1
-initial_BLUE: 0.1 #0.5
-#initial_WHITE: 0.5 #0.5
+[neopixel chamberlight]
+pin: PE6
+chain_count:50
 
 [temperature_sensor chamber]
 sensor_type: Generic 3950
@@ -389,9 +381,9 @@ aliases:
 #*#
 #*# [input_shaper]
 #*# shaper_type_x = ei
-#*# shaper_freq_x = 48.2
-#*# shaper_type_y = ei
-#*# shaper_freq_y = 40.4
+#*# shaper_freq_x = 44.4
+#*# shaper_type_y = 2hump_ei
+#*# shaper_freq_y = 45.4
 #*#
 #*# [skew_correction my_skew_profile]
 #*# xy_skew = -0.0030197113706874703
@@ -399,10 +391,10 @@ aliases:
 #*# yz_skew = 0.0
 #*#
 #*# [cartographer scan_model default]
-#*# coefficients = 1.551691544080425,2.0508881162879895,0.8476726580744381,0.2874806776313822,0.381134361284811,0.7000210278354789,-0.2349386803967324,-0.7508741014671427,0.25574468274372636,0.41544605008421065
-#*# domain = 3.314833376574766e-07,3.411163540186475e-07
-#*# z_offset = -0.22
-#*# reference_temperature = 34.87
+#*# coefficients = 1.553005562236011,2.0519342685313067,0.8466254194049477,0.2510377653372887,0.3654319530320572,0.8076744784562401,-0.1823551416824284,-0.8502494333313942,0.2203108359119314,0.4444083588681826
+#*# domain = 3.316055090723933e-07,3.412561293007343e-07
+#*# z_offset = -0.17
+#*# reference_temperature = 48.08
 #*# software_version = 1.4.0
 #*# mcu_version = CARTOGRAPHER V4 6.0.0
 #*#
